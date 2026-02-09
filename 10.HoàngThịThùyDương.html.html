@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Báo tường - Chắp cánh ước mơ</title>
+
+<style>
+body {
+    font-family: "Times New Roman", serif;
+    background: #eaf6ff;
+}
+
+.baotuong {
+    width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border: 2px solid #4da6ff;
+    position: relative;
+}
+
+/* Tiêu đề */
+.title {
+    text-align: center;
+    color: #0066cc;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Cánh trang trí */
+.wing {
+    position: absolute;
+    top: 20px;
+    width: 120px;
+    opacity: 0.2;
+}
+
+.wing.left { left: 10px; }
+.wing.right { right: 10px; transform: scaleX(-1); }
+
+.section { margin-top: 20px; }
+
+.section h3 {
+    color: #0066cc;
+    border-bottom: 2px solid #0066cc;
+}
+
+.images img {
+    width: 180px;
+    height: 120px;
+    margin: 5px;
+    border: 1px solid #ccc;
+}
+
+.video {
+    text-align: center;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+}
+
+/* Nút gửi */
+button {
+    margin-top: 10px;
+    padding: 8px 20px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #004c99;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    color: gray;
+}
+</style>
+</head>
+
+<body>
+
+<div class="baotuong">
+
+<img class="wing left" src="https://via.placeholder.com/120x200">
+<img class="wing right" src="https://via.placeholder.com/120x200">
+
+<div class="title">CHẮP CÁNH ƯỚC MƠ</div>
+<div class="subtitle">
+    Báo tường lưu bút – Tuổi học trò – Lớp 12A9
+</div>
+
+<div class="section">
+<h3>Cảm xúc ngày ra trường</h3>
+<p>
+Ngày ra trường đến nhẹ mà lòng nặng trĩu. Vui vì cuối cùng cũng khép lại một chặng đường cố gắng,
+nhưng buồn vì phải rời xa lớp học quen, thầy cô và những người bạn đã cùng nhau cười khóc suốt bao năm.
+Ra trường không chỉ là kết thúc, mà còn là bắt đầu cho những ước mơ đang chờ phía trước.
+</p>
+</div>
+
+<div class="section">
+<h3>Chắp cánh ước mơ</h3>
+<p>
+Ra trường là khoảnh khắc đôi cánh ước mơ được chắp lên từ những năm tháng học trò đầy kỷ niệm.
+Mỗi bài học là hành trang để ta tự tin bay cao, bay xa trên con đường tương lai.
+</p>
+</div>
+
+<div class="section">
+<h3>Góc ảnh kỷ niệm</h3>
+<div class="images">
+<img src="https://static.tuoitre.vn/tto/i/s626/2017/08/03/mscs-graduation-ceremony-1501738487.jpg">
+<img src="https://newsmd2fr.keeng.vn/tiin/archive/images/20190525/093511_1.jpg">
+<img src="https://cafefcdn.com/203337114487263232/2024/2/6/vi-sao-sinh-vien-ra-truong-cam-tren-tay-tam-bang-tot-nghiep-xep-loai-kha-gioi-van-kho-tim-duoc-viec-lam1-1707186630470-1707186630791365213212.jpg">
+<img src="https://ss-images.saostar.vn/2018/06/27/3099640/7.jpg">
+<img src="https://afamilycdn.com/2017/img-6817-1-1510587905328.jpg">
+</div>
+</div>
+
+<div class="section">
+<h3>Video kỷ niệm</h3>
+<div class="video">
+<video width="400" controls>
+<source src="https://player.vimeo.com/external/372754246.sd.mp4?s=886ff8efcbd1506a317206492ca7b4b24b550d8f&profile_id=139" type="video/mp4">
+Trình duyệt không hỗ trợ video
+</video>
+</div>
+</div>
+
+<div class="section">
+<h3>Lưu bút – Bình luận</h3>
+<textarea id="comment" placeholder="Gửi lời nhắn cho bạn bè và thầy cô..."></textarea>
+<br>
+<button onclick="guiLoiNhan()">Gửi</button>
+</div>
+
+<footer>
+Báo tường “Chắp cánh ước mơ” – Lớp 12A9 – Năm học 2025–2026
+</footer>
+
+</div>
+
+<script>
+function guiLoiNhan() {
+    var nd = document.getElementById("comment").value;
+
+    if (nd.trim() === "") {
+        alert("Bạn chưa nhập nội dung!");
+    } else {
+        alert("Gửi lưu bút thành công 💙");
+        document.getElementById("comment").value = "";
+    }
+}
+</script>
+
+</body>
+</html>
